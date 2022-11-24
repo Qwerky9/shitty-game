@@ -15,6 +15,7 @@ public class GamePanel extends JPanel{
     private ImageIcon bg = new ImageIcon(this.getClass().getResource("bg.png"));
     private ImageIcon exit = new ImageIcon(this.getClass().getResource("exit.png"));
     private ImageIcon starts = new ImageIcon(this.getClass().getResource("start.png"));
+    private ImageIcon title = new ImageIcon(this.getClass().getResource("title.png"));
     public JButton BStart = new JButton(starts);
     public JButton BExit1 = new JButton(exit);
 
@@ -26,6 +27,7 @@ public class GamePanel extends JPanel{
         add(BExit1);
         BStart.setBounds(500,300,370,175);
         add(BStart);
+        
     }
     
     private void setPanelSize(){
@@ -39,6 +41,7 @@ public class GamePanel extends JPanel{
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.drawImage(bg.getImage(),0,0,1280,800,this);
+        g.drawImage(title.getImage(),500,0,350,350,this);
     }
 }
 
